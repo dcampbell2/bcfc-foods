@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "bcfc-foods",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,9 +10,17 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcampbell2/bcfc-foods.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcampbell2/bcfc-foods/issues"
+  },
+  "homepage": "https://github.com/dcampbell2/bcfc-foods#readme",
   "dependencies": {
     "concurrently": "^6.2.0",
     "express": "^4.17.1",
