@@ -22,7 +22,7 @@ connection.on("connected", () => {
   console.log("Mongoose Successfully Connected!");
 });
 
-connection.on("error", () => {
+connection.on("error", (err) => {
   console.log("Mongoose connection error", err);
 });
 
