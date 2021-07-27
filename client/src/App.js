@@ -4,7 +4,7 @@ import axios from "axios";
 import Home from "./Containers/Home/Home";
 import Jamaican from "./Containers/Food/Jamaican";
 import Southern from "./Containers/Food/Southern";
-import {BrowserRouter, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
   useEffect(() => {
@@ -13,7 +13,7 @@ function App() {
     });
   }, []);
   return (
-    <BrowserRouter basename="/">
+    <Router>
     <div>
       <Switch>
       <Route exact path = "/" component={Home} />
@@ -21,7 +21,7 @@ function App() {
       <Route exact path = "/reevesbbq" component={Southern} />
       </Switch>
     </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
