@@ -5,6 +5,8 @@ import Home from "./Containers/Home/Home";
 import Jamaican from "./Containers/Food/Jamaican";
 import Southern from "./Containers/Food/Southern";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   useEffect(() => {
