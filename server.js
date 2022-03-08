@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path")
 const app = express();
+const IzlandController = require("./controllers/izland")
 
 const PORT = process.env.PORT || 3001;
 
@@ -26,6 +27,8 @@ connection.on("connected", () => {
 connection.on("error", (err) => {
   console.log("Mongoose connection error", err);
 });
+
+app.use("/api/izlandgirls", IzlandController)
 
 app.get("/api/config", (req, res) => {
   res.json({ success: true });
