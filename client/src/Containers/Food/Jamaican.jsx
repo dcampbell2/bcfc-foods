@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+const axios = require("axios")
 
 const Jamaican = () => {
+
+  const [food, setFood] = useState([]);
     return (
         <div>
             <h1> Jamaican Food Menu Page</h1>
