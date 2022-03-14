@@ -9,7 +9,7 @@ const Jamaican = () => {
     axios
       .get("/api/izlandgirls")
       .then((response) => {
-        console.log(response)
+        console.log(response);
         setFood(response.data);
       })
       .catch((err) => {
@@ -19,10 +19,18 @@ const Jamaican = () => {
   return (
     <div>
       <h1> Jamaican Food Menu Page</h1>
-        {food.map((foodItems) => {
-         return( <FoodCard {...foodItems} key={foodItems._id}/>
-        )})}
-
+      <div className="container">
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {food.map((foodItems) => {
+            return (
+              <div className="col">
+                
+                <FoodCard {...foodItems} key={foodItems._id} />{" "}
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

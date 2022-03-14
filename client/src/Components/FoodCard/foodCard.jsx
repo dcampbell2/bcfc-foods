@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 const foodCard = ({title, description, imageURL, price}) => {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", height: "35rem" }}>
         <Card.Img variant="top" src={imageURL} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
