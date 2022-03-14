@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FoodCard from "../../Components/FoodCard/FoodCard.jsx";
+import FoodCard from "../../Components/FoodCard/FoodCard";
 const axios = require("axios");
 
 const Jamaican = () => {
