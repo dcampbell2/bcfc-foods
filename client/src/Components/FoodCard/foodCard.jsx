@@ -1,13 +1,16 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
-const foodCard = () => {
+const foodCard = ({title, description, imageURL, price}) => {
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={imageURL} />
         <Card.Body>
-          <Card.Title>Name of Food</Card.Title>
-          <Card.Text>Food Description</Card.Text>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{description}</Card.Text>
+          <Card.Text>{price}</Card.Text>
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>

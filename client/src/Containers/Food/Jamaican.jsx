@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import FoodCard from "../../Components/FoodCard/FoodCard.jsx";
 const axios = require("axios");
 
 const Jamaican = () => {
@@ -20,7 +19,9 @@ const Jamaican = () => {
   return (
     <div>
       <h1> Jamaican Food Menu Page</h1>
-
+        {food.map((foodItems) => {
+         return( <FoodCard {...foodItems} key={foodItems._id}/>
+        )})}
 
     </div>
   );
