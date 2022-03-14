@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const foodCard = ({title, description, imageURL, price}) => {
+const FoodCard = ({title, description, imageURL, price}) => {
   return (
     <div>
       <Card style={{ width: "18rem", height: "35rem" }}>
@@ -18,4 +18,4 @@ const foodCard = ({title, description, imageURL, price}) => {
   );
 };
 
-export default foodCard;
+export default FoodCard;
