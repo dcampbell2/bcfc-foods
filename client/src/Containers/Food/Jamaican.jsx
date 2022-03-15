@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FoodCard from "../../Components/FoodCard/FoodCard.jsx";
+import NavBar from "../../Components/Nav/Nav.jsx";
 const axios = require("axios");
 
 const Jamaican = () => {
@@ -18,6 +19,7 @@ const Jamaican = () => {
   }, []);
   return (
     <div>
+      <NavBar />
       <h1> Jamaican Food Menu Page</h1>
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">

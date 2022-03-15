@@ -1,21 +1,22 @@
 import React from "react";
+import Nav from "react-bootstrap/Nav";
 
-const Nav = () => {
+const NavBar = () => {
   return (
     <div>
-      <Nav className="justify-content-center" activeKey="/home">
+      <Nav className="justify-content-center" activeKey="/">
         <Nav.Item>
-          <Nav.Link href="*">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="/izlandgirls">Link</Nav.Link>
+          <Nav.Link href="/izlandgirls">Izland Girls</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="/reevesbbq">Link</Nav.Link>
+          <Nav.Link href="/reevesbbq">Reeves Souther BBQ</Nav.Link>
         </Nav.Item>
       </Nav>
     </div>
   );
 };
 
-export default Nav;
+export default NavBar;
