@@ -1,12 +1,21 @@
 const mongoose = require("mongoose");
 const IzlandFood = require("./models/izland.js")
 
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/bcfc-foods", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-});
+const connectDB = async () => {
+    try {
+      await mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/bcfc-foods", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+      });
+  
+      console.log("MongoDB connection SUCCESS");
+    } catch (error) {
+      console.error("MongoDB connection FAIL");
+      process.exit(1);
+    }
+  };
 
 let menuSeed = [
     {
@@ -155,8 +164,10 @@ let menuSeed = [
     },
 ]
 
-
-IzlandFood.deleteMany({})
+const importData = async () => {
+    try {
+        await connectDB();
+       await IzlandFood.deleteMany({})
   .then(() => IzlandFood.collection.insertMany(menuSeed))
 // db.restaurantMenu.collection.insertMany(menuSeed)
   .then((data) => {
@@ -167,3 +178,12 @@ IzlandFood.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+
+  
+        
+}
+catch (error) {
+    console.error("Error with data import", error);
+    process.exit(1);
+}};
+importData();
