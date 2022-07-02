@@ -27,8 +27,8 @@ const NavBar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/izlandgirlz">Home</Nav.Link>
-              <Nav.Link href="/reevesbbq">Link</Nav.Link>
+              <Nav.Link href="/izlandgirls">Izland Girls</Nav.Link>
+              <Nav.Link href="/reevesbbq">Reeves Southern BBQ</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <FormControl
