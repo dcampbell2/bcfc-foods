@@ -13,7 +13,7 @@ const NavBar = () => {
 <>
     <Navbar key={false} bg="light" expand={false} className="mb-3">
       <Container fluid>
-        <Navbar.Brand href="#">Foods of BCFC</Navbar.Brand>
+        <Navbar.Brand href="/">Foods of BCFC</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false}`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-false`}
