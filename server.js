@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("client/build"));
+app.use(express.static("/client/build"));
 
 mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/bcfc-foods", {
   useNewUrlParser: true,
