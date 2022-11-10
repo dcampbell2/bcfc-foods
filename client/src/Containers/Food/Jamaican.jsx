@@ -25,7 +25,7 @@ const Jamaican = () => {
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {food.map((foodItems) => {
             return (
-              <div className="col">
+              <div className="col-6">
                 
                 <FoodCard {...foodItems} key={foodItems._id} />{" "}
               </div>
